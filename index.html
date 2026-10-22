@@ -20,31 +20,31 @@
     radial-gradient(circle at 12% 8%, rgba(233,94,63,.14) 0 140px, transparent 141px),
     radial-gradient(circle at 92% 30%, rgba(56,131,103,.12) 0 110px, transparent 111px),
     var(--bg)}
-  .stars{color:var(--accent);font-size:22px;letter-spacing:.12em;margin:0 0 6px}
-  .wrap{max-width:560px;margin:0 auto;padding:22px 20px 40px;min-height:100dvh;display:flex;flex-direction:column}
-  header{display:flex;align-items:center;justify-content:space-between;gap:12px;margin-bottom:26px}
+  .stars{color:var(--accent);font-size:16px;letter-spacing:.12em;margin:0 0 2px}
+  .wrap{max-width:560px;margin:0 auto;padding:12px 18px 32px;min-height:100dvh;display:flex;flex-direction:column}
+  header{display:flex;align-items:center;justify-content:space-between;gap:12px;margin-bottom:14px}
   .brand{display:flex;align-items:center;gap:10px;text-decoration:none;color:var(--fg)}
   .brand svg{width:22px;height:28px;flex:none}
   .brand b{display:block;font-size:14px;letter-spacing:.04em;line-height:1.1}
   .brand span{display:block;font-size:13px;letter-spacing:.06em;line-height:1.1;color:var(--sub)}
   select{appearance:none;-webkit-appearance:none;border:1.5px solid var(--line);border-radius:999px;background:#fff url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='12' height='8'%3E%3Cpath d='M1 1l5 5 5-5' fill='none' stroke='%23888' stroke-width='1.6'/%3E%3C/svg%3E") no-repeat right 14px center;color:var(--fg);padding:10px 36px 10px 14px;font-size:16px;line-height:1.2;min-height:44px}
   select:focus{outline:2px solid var(--accent);outline-offset:2px}
-  h1{font-size:36px;line-height:1.15;margin:0 0 10px;font-weight:800}
+  h1{font-size:30px;line-height:1.12;margin:0 0 6px;font-weight:800}
   h1 em{font-style:normal;color:var(--accent)}
-  .lead{font-size:19px;line-height:1.5;color:var(--sub);margin:0 0 20px}
-  .ask{background:#fff;border-left:5px solid var(--accent);border-radius:12px;padding:14px 16px;margin:0 0 20px;box-shadow:0 4px 12px rgba(25,25,25,.06)}
-  .ask-main{margin:0;font-size:18px;line-height:1.45;font-weight:700;color:var(--fg)}
-  .ask-main+.ask-main{margin-top:2px}
-  .ask-sub{margin:10px 0 0;font-size:17px;line-height:1.4;color:var(--accent);font-weight:700}
-  .choices{display:grid;grid-template-columns:1fr;gap:12px;margin-bottom:20px}
-  .choice{display:flex;align-items:center;justify-content:space-between;min-height:72px;padding:14px 22px;border-radius:16px;text-decoration:none;color:#fff;box-shadow:0 6px 16px rgba(25,25,25,.12);transition:transform .15s}
+  .lead{font-size:16px;line-height:1.35;color:var(--sub);margin:0 0 10px}
+  .ask{background:#fff;border-left:5px solid var(--accent);border-radius:12px;padding:9px 14px;margin:0 0 12px;box-shadow:0 4px 12px rgba(25,25,25,.06)}
+  .ask-main{margin:0;font-size:16px;line-height:1.38;font-weight:700;color:var(--fg)}
+  .ask-main+.ask-main{margin-top:0}
+  .ask-sub{margin:4px 0 0;font-size:15px;line-height:1.35;color:var(--accent);font-weight:700}
+  .choices{display:grid;grid-template-columns:1fr;gap:9px;margin-bottom:18px}
+  .choice{display:flex;align-items:center;justify-content:space-between;min-height:56px;padding:8px 20px;border-radius:14px;text-decoration:none;color:#fff;box-shadow:0 6px 16px rgba(25,25,25,.12);transition:transform .15s}
   .choice:active{transform:scale(.98)}
   .choice:focus-visible{outline:3px solid var(--fg);outline-offset:3px}
-  .choice span{font-weight:800;letter-spacing:.02em;font-size:26px;line-height:1.1}
-  .choice i{font-style:normal;font-size:26px;opacity:.9}
-  .gyg{background:var(--gyg)} .gyg span{font-size:23px;letter-spacing:.05em}
-  .klook{background:var(--klook)} .klook span{font-size:30px}
-  .viator{background:var(--viator)} .viator span{font-size:30px}
+  .choice span{font-weight:800;letter-spacing:.02em;font-size:23px;line-height:1.1}
+  .choice i{font-style:normal;font-size:22px;opacity:.9}
+  .gyg{background:var(--gyg)} .gyg span{font-size:20px;letter-spacing:.05em}
+  .klook{background:var(--klook)} .klook span{font-size:26px}
+  .viator{background:var(--viator)} .viator span{font-size:26px}
   .steps{background:var(--card);border:1.5px solid var(--line);border-radius:16px;padding:16px 18px;margin:0 0 18px}
   .steps ol{margin:0;padding-left:1.4em;font-size:18px;line-height:1.5;color:var(--fg)}
   .steps li{margin:0 0 6px;padding-left:.2em}
@@ -55,7 +55,10 @@
   .mention{font-size:19px;line-height:1.5;margin:0 0 8px;font-weight:800;color:var(--accent)}
   .thanks{font-size:17px;line-height:1.55;color:var(--sub);margin:0}
   footer{margin-top:auto;padding-top:28px;font-size:13px;color:#9a9a9a}
-  html[lang="ja"] h1,html[lang="zh"] h1{font-size:27px;letter-spacing:-.01em}
+  html[lang="ja"] h1,html[lang="zh"] h1{font-size:26px;letter-spacing:-.01em}
+  /* avoid one-word last lines ("us!", "with.") */
+  h1,.lead,.ask-main,.ask-sub,.mention,.thanks{text-wrap:balance}
+  html:not([lang="ja"]):not([lang="zh"]) h1{max-width:9.2em}
   @media (min-width:480px){h1{font-size:42px} html[lang="ja"] h1,html[lang="zh"] h1{font-size:32px}}
 </style>
 </head>
@@ -63,7 +66,6 @@
 <div class="wrap">
   <header>
     <a class="brand" href="#" aria-label="BROTHER JOYFACTORY TOKYO">
-      <svg viewBox="0 0 20 26" aria-hidden="true"><path d="M0 0 L0 18 L4.5 14 L7.5 21.5 L11 20 L8 13 L14 13 Z" fill="#191919"/></svg>
       <div><b>BROTHER</b><span>JOYFACTORY TOKYO</span></div>
     </a>
     <label>
