@@ -45,6 +45,19 @@
   .gyg{background:var(--gyg)} .gyg span{font-size:20px;letter-spacing:.05em}
   .klook{background:var(--klook)} .klook span{font-size:26px}
   .viator{background:var(--viator)} .viator span{font-size:26px}
+  .site{display:flex;flex-direction:column;gap:0}
+  .how{margin:0 4px}
+  .how summary{list-style:none;cursor:pointer;display:flex;align-items:center;gap:6px;min-height:44px;padding:4px 6px;font-size:16px;font-weight:700;color:var(--sub)}
+  .how summary::-webkit-details-marker{display:none}
+  .how summary::after{content:"";width:8px;height:8px;border-right:2px solid var(--muted);border-bottom:2px solid var(--muted);transform:rotate(45deg) translateY(-2px);margin-left:2px}
+  .how[open] summary::after{transform:rotate(-135deg) translateY(-2px)}
+  .how ol{margin:0 0 6px;padding:12px 14px 12px 2.1em;background:var(--card);border:1.5px solid var(--line);border-radius:12px;font-size:16px;line-height:1.5}
+  .how li{margin:0 0 4px;padding-left:.2em}
+  .how li::marker{color:var(--accent);font-weight:800}
+  .shot{margin:8px 0 10px}
+  .shot img{display:block;width:100%;height:auto;border:1px solid var(--line);border-radius:8px;background:#fff}
+  .shot figcaption{margin-top:3px;font-size:11px;color:var(--muted)}
+  .how p{margin:0 0 10px;padding:0 6px;font-size:15px;line-height:1.45;color:var(--sub)}
   .steps{background:var(--card);border:1.5px solid var(--line);border-radius:16px;padding:16px 18px;margin:0 0 18px}
   .steps ol{margin:0;padding-left:1.4em;font-size:18px;line-height:1.5;color:var(--fg)}
   .steps li{margin:0 0 6px;padding-left:.2em}
@@ -57,7 +70,7 @@
   footer{margin-top:auto;padding-top:28px;font-size:13px;color:#9a9a9a}
   html[lang="ja"] h1,html[lang="zh"] h1{font-size:26px;letter-spacing:-.01em}
   /* avoid one-word last lines ("us!", "with.") */
-  h1,.lead,.ask-main,.ask-sub,.mention,.thanks{text-wrap:balance}
+  h1,.lead,.ask-main,.ask-sub,.mention,.thanks,.how p{text-wrap:balance}
   html:not([lang="ja"]):not([lang="zh"]) h1{max-width:9.2em}
   @media (min-width:480px){h1{font-size:42px} html[lang="ja"] h1,html[lang="zh"] h1{font-size:32px}}
 </style>
@@ -90,19 +103,23 @@
   </div>
 
   <nav class="choices" aria-label="Booking sites">
-    <a class="choice gyg" href="https://www.getyourguide.com/tokyo-l193/joyfactory-tokyo-entry-ticket-and-samurai-legend-experiences-t1241619/" target="_blank" rel="noopener"><span>GETYOURGUIDE</span><i>→</i></a>
-    <a class="choice klook" href="https://www.klook.com/en-US/my_reviews" target="_blank" rel="noopener"><span>klook</span><i>→</i></a>
-    <a class="choice viator" href="https://www.viator.com/tours/Ginza/Brother-Joyfactory-Tokyo-Entry-and-Samurai-Experience/d51050-5626102P4" target="_blank" rel="noopener"><span>viator</span><i>→</i></a>
+    <div class="site">
+      <a class="choice gyg" href="https://www.getyourguide.com/scan-review-qr?activity_id=1241619&amp;utm_medium=offline&amp;utm_source=supplier_review_link&amp;utm_campaign=supplier_review_qrcode&amp;utm_content=1241619" target="_blank" rel="noopener"><span>GETYOURGUIDE</span><i>→</i></a>
+      <details class="how"><summary data-i18n="how">How to write a review</summary>
+        <ol><li data-i18n="g1"></li><li data-i18n="g2"></li><li data-i18n="g3"></li></ol><p data-i18n="gn"></p></details>
+    </div>
+    <div class="site">
+      <a class="choice klook" href="https://www.klook.com/en-US/my_reviews" target="_blank" rel="noopener"><span>klook</span><i>→</i></a>
+      <details class="how"><summary data-i18n="how">How to write a review</summary>
+        <ol><li data-i18n="k1"></li><li data-i18n="k2"></li><li data-i18n="k3"></li></ol><p data-i18n="kn"></p></details>
+    </div>
+    <div class="site">
+      <a class="choice viator" href="https://www.viator.com/tours/Ginza/Brother-Joyfactory-Tokyo-Entry-and-Samurai-Experience/d51050-5626102P4" target="_blank" rel="noopener"><span>viator</span><i>→</i></a>
+      <details class="how"><summary data-i18n="how">How to write a review</summary>
+        <ol><li data-i18n="v1"></li><li><span data-i18n="v2"></span><figure class="shot"><img src="img/viator_step1.webp" width="900" height="633" alt="" loading="lazy"><figcaption>Image: Viator</figcaption></figure></li><li><span data-i18n="v3"></span><figure class="shot"><img src="img/viator_step2.webp" width="900" height="477" alt="" loading="lazy"><figcaption>Image: Viator</figcaption></figure></li><li><span data-i18n="v4"></span><figure class="shot"><img src="img/viator_step3.webp" width="900" height="645" alt="" loading="lazy"><figcaption>Image: Viator</figcaption></figure></li></ol><p data-i18n="vn"></p></details>
+    </div>
   </nav>
 
-  <div class="steps">
-    <ol>
-      <li data-i18n="s1">Open the site you booked with</li>
-      <li data-i18n="s2">Find your booking</li>
-      <li data-i18n="s3">Tap “Write a review”</li>
-    </ol>
-    <p data-i18n="viator">Viator: use the review link in your email.</p>
-  </div>
 
   <p class="mention" data-i18n="mention">Please mention your host’s name!</p>
   <p class="thanks" data-i18n="thanks">Thank you for your honest feedback.</p>
@@ -113,31 +130,36 @@
 <script>
 (function(){
   var I18N = {
-    en:{title:"Thank you for joining us!",lead:"Please leave a review on the site you booked with.",
+    en:{how:"How to write a review",g1:"Tap the GetYourGuide button above",g2:"Log in with the account you booked with",g3:"Choose stars, write a few words and send",gn:"You can also use the review email sent after your visit. Only guests who booked can review.",k1:"Tap the Klook button above and log in",k2:"Choose this experience",k3:"Choose stars, write a few words and send",kn:"Reviews can be written within 1 month of your activity date.",v1:"Open the email from Viator sent after your visit and tap the review button",v2:"Choose stars, who you came with and whether you’d recommend it, then Next",v3:"Add photos if you like (optional)",v4:"Write your review (100+ characters) and a title, tick the box, then Submit",vn:"Viator sends up to 3 reminder emails.",
+        title:"Thank you for joining us!",lead:"Please leave a review on the site you booked with.",
         ask1:"We just opened in Kyobashi, Tokyo.",ask2:"Your review means a lot to us.",ask3:"It takes just 1 minute 🙏",
         s1:"Open the site you booked with",s2:"Find your booking",s3:"Tap “Write a review”",
         viator:"Viator: use the review link in your email.",
         mention:"Please mention your host’s name!",
         thanks:"Thank you for your honest feedback."},
-    ja:{title:"ありがとうございました！",lead:"予約したサイトで口コミをお願いします",
+    ja:{how:"レビューの書き方",g1:"上の GetYourGuide のボタンを押す",g2:"予約したアカウントでログイン",g3:"星を選び、ひとこと書いて送信",gn:"体験の後に届くメールからも書けます。書けるのは予約した方だけです。",k1:"上の Klook のボタンを押してログイン",k2:"この体験を選ぶ",k3:"星を選び、ひとこと書いて送信",kn:"レビューは体験日から1か月以内に書けます。",v1:"体験の後に Viator から届くメールを開き、レビューのボタンを押す",v2:"星・だれと来たか・おすすめかを選んで［Next］",v3:"写真を足す（なくても大丈夫）",v4:"感想（100文字以上）とタイトルを書き、四角にチェックして［Submit］",vn:"Viator からのメールは最大3通届きます。",
+        title:"ありがとうございました！",lead:"予約したサイトで口コミをお願いします",
         ask1:"東京・京橋に開業したばかりです。",ask2:"口コミがいちばんの力になります。",ask3:"所要時間は1分ほどです 🙏",
         s1:"予約したサイトを開く",s2:"予約を探す",s3:"「レビューを書く」をタップ",
         viator:"Viatorはメールのレビューリンクから",
         mention:"スタッフの名前も書いてください！",
         thanks:"率直なご感想をお待ちしています。"},
-    zh:{title:"感谢您的参与！",lead:"请在您预订的网站上留下评价。",
+    zh:{how:"如何撰写评价",g1:"点击上方的 GetYourGuide 按钮",g2:"使用预订时的账号登录",g3:"选择星级，写几句话后提交",gn:"也可以通过体验后收到的邮件撰写。只有预订的客人可以评价。",k1:"点击上方的 Klook 按钮并登录",k2:"选择本次体验",k3:"选择星级，写几句话后提交",kn:"请在体验日期后1个月内撰写评价。",v1:"打开体验后 Viator 发来的邮件，点击评价按钮",v2:"选择星级、同行者和是否推荐，然后点 Next",v3:"可以添加照片（可选）",v4:"写下评价（至少100个字符）和标题，勾选方框，然后点 Submit",vn:"Viator 最多会发送3封提醒邮件。",
+        title:"感谢您的参与！",lead:"请在您预订的网站上留下评价。",
         ask1:"我们刚刚在东京京桥开业。",ask2:"您的评价对我们意义重大。",ask3:"只需约1分钟 🙏",
         s1:"打开您预订的网站",s2:"找到您的订单",s3:"点击“撰写评价”",
         viator:"Viator：请使用邮件中的评价链接",
         mention:"请写上接待您的工作人员姓名！",
         thanks:"谢谢您，您的真实反馈对我们很重要。"},
-    fr:{title:"Merci d’être venu !",lead:"Laissez un avis sur le site de réservation.",
+    fr:{how:"Comment laisser un avis",g1:"Touchez le bouton GetYourGuide ci-dessus",g2:"Connectez-vous avec le compte de votre réservation",g3:"Choisissez les étoiles, écrivez quelques mots et envoyez",gn:"Vous pouvez aussi utiliser l’e-mail d’avis reçu après votre visite. Seuls les clients ayant réservé peuvent laisser un avis.",k1:"Touchez le bouton Klook ci-dessus et connectez-vous",k2:"Choisissez cette activité",k3:"Choisissez les étoiles, écrivez quelques mots et envoyez",kn:"Les avis peuvent être laissés dans le mois suivant la date de l’activité.",v1:"Ouvrez l’e-mail de Viator reçu après votre visite et touchez le bouton d’avis",v2:"Choisissez les étoiles, avec qui vous étiez et si vous recommandez, puis Next",v3:"Ajoutez des photos si vous voulez (facultatif)",v4:"Écrivez votre avis (100 caractères minimum) et un titre, cochez la case, puis Submit",vn:"Viator envoie jusqu’à 3 e-mails de rappel.",
+        title:"Merci d’être venu !",lead:"Laissez un avis sur le site de réservation.",
         ask1:"Nous venons d’ouvrir à Kyobashi, Tokyo.",ask2:"Votre avis compte beaucoup pour nous.",ask3:"Cela ne prend qu’une minute 🙏",
         s1:"Ouvrez le site de réservation",s2:"Retrouvez votre réservation",s3:"Touchez « Écrire un avis »",
         viator:"Viator : utilisez le lien reçu par e-mail.",
         mention:"Mentionnez le prénom de votre hôte !",
         thanks:"Merci pour votre avis sincère."},
-    es:{title:"¡Gracias por venir!",lead:"Deja una reseña en el sitio donde reservaste.",
+    es:{how:"Cómo dejar una reseña",g1:"Toca el botón de GetYourGuide de arriba",g2:"Inicia sesión con la cuenta de tu reserva",g3:"Elige las estrellas, escribe unas palabras y envía",gn:"También puedes usar el correo de reseña que recibes después de tu visita. Solo pueden opinar quienes reservaron.",k1:"Toca el botón de Klook de arriba e inicia sesión",k2:"Elige esta experiencia",k3:"Elige las estrellas, escribe unas palabras y envía",kn:"Puedes escribir la reseña hasta 1 mes después de la fecha de la actividad.",v1:"Abre el correo de Viator que recibes después de tu visita y toca el botón de reseña",v2:"Elige las estrellas, con quién viajaste y si lo recomiendas, y luego Next",v3:"Añade fotos si quieres (opcional)",v4:"Escribe tu reseña (mínimo 100 caracteres) y un título, marca la casilla y luego Submit",vn:"Viator envía hasta 3 correos de recordatorio.",
+        title:"¡Gracias por venir!",lead:"Deja una reseña en el sitio donde reservaste.",
         ask1:"Acabamos de abrir en Kyobashi, Tokio.",ask2:"Tu reseña significa mucho para nosotros.",ask3:"Solo toma 1 minuto 🙏",
         s1:"Abre el sitio donde reservaste",s2:"Busca tu reserva",s3:"Toca “Escribir una reseña”",
         viator:"Viator: usa el enlace de tu correo.",
