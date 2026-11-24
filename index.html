@@ -31,7 +31,7 @@
   select:focus{outline:2px solid var(--accent);outline-offset:2px}
   h1{font-size:30px;line-height:1.12;margin:0 0 6px;font-weight:800}
   h1 em{font-style:normal;color:var(--accent)}
-  .lead{font-size:16px;line-height:1.35;color:var(--sub);margin:0 0 10px}
+  .lead{word-break:auto-phrase;white-space:pre-line;font-size:16px;line-height:1.35;color:var(--sub);margin:0 0 10px}
   .ask{background:#fff;border-left:5px solid var(--accent);border-radius:12px;padding:9px 14px;margin:0 0 12px;box-shadow:0 4px 12px rgba(25,25,25,.06)}
   .ask-main{margin:0;font-size:16px;line-height:1.38;font-weight:700;color:var(--fg)}
   .ask-main+.ask-main{margin-top:0}
@@ -98,7 +98,7 @@
 
   <p class="stars" aria-hidden="true">★★★★★</p>
   <h1 data-i18n="title">Thank you for joining us!</h1>
-  <p class="lead" data-i18n="lead">Everyone in your group can leave a review on Google Maps.</p>
+  <p class="lead" data-i18n="lead">Only the person who booked can review on the booking site. Everyone else in your group, please review on Google Maps.</p>
   <div class="ask">
     <p class="ask-main" data-i18n="ask1">We just opened in Kyobashi, Tokyo.</p>
     <p class="ask-main" data-i18n="ask2">Your review means a lot to us.</p>
@@ -140,35 +140,35 @@
 (function(){
   var I18N = {
     en:{vA1:"Tap the Viator button above and log in with the account you booked with",vA2:"Open “Bookings”, choose this experience and tap “Write a Review”",vor:"Or use the email from Viator:",gm:"If you booked, please also review on your booking site",o1:"Tap the Google Maps button above",o2:"Log in with your Google account",o3:"Choose stars, write a few words and tap Post",on:"Anyone with a Google account can post, even if someone else booked.",how:"How to write a review",g1:"Tap the GetYourGuide button above",g2:"Log in with the account you booked with",g3:"Choose stars, write a few words and send",gn:"You can also use the review email sent after your visit. Only guests who booked can review.",k1:"Tap the Klook button above and log in",k2:"Choose this experience",k3:"Choose stars, write a few words and send",kn:"Reviews can be written within 1 month of your activity date.",v1:"Open the email from Viator sent after your visit and tap the review button",v2:"Choose stars, who you came with and whether you’d recommend it, then Next",v3:"Add photos if you like (optional)",v4:"Write your review (100+ characters) and a title, tick the box, then Submit",vn:"Viator sends up to 3 reminder emails.",
-        title:"Thank you for joining us!",lead:"Everyone in your group can leave a review on Google Maps.",
+        title:"Thank you for joining us!",lead:"Only the person who booked can review on the booking site.\nEveryone else in your group, please review on Google Maps.",
         ask1:"We just opened in Kyobashi, Tokyo.",ask2:"Your review means a lot to us.",ask3:"It takes just 1 minute 🙏",
         s1:"Open the site you booked with",s2:"Find your booking",s3:"Tap “Write a review”",
         viator:"Viator: use the review link in your email.",
         mention:"Please mention your host’s name!",
         thanks:"Thank you for your honest feedback."},
     ja:{vA1:"上の Viator のボタンを押し、予約したアカウントでログイン",vA2:"［Bookings］を開き、この体験を選んで［Write a Review］を押す",vor:"または、Viator から届くメールから：",gm:"予約した方は、予約したサイトにも",o1:"上の Google マップのボタンを押す",o2:"Google のアカウントでログイン",o3:"星を選び、ひとこと書いて［投稿］",on:"Google のアカウントがあれば、予約していない方も書けます。",how:"レビューの書き方",g1:"上の GetYourGuide のボタンを押す",g2:"予約したアカウントでログイン",g3:"星を選び、ひとこと書いて送信",gn:"体験の後に届くメールからも書けます。書けるのは予約した方だけです。",k1:"上の Klook のボタンを押してログイン",k2:"この体験を選ぶ",k3:"星を選び、ひとこと書いて送信",kn:"レビューは体験日から1か月以内に書けます。",v1:"体験の後に Viator から届くメールを開き、レビューのボタンを押す",v2:"星・だれと来たか・おすすめかを選んで［Next］",v3:"写真を足す（なくても大丈夫）",v4:"感想（100文字以上）とタイトルを書き、四角にチェックして［Submit］",vn:"Viator からのメールは最大3通届きます。",
-        title:"ありがとうございました！",lead:"ご一緒の方もみなさん、Google マップで口コミをお願いします",
+        title:"ありがとうございました！",lead:"予約サイトのレビューは、予約した方しか書けません。\nご一緒の方は、Google マップでお願いします",
         ask1:"東京・京橋に開業したばかりです。",ask2:"口コミがいちばんの力になります。",ask3:"所要時間は1分ほどです 🙏",
         s1:"予約したサイトを開く",s2:"予約を探す",s3:"「レビューを書く」をタップ",
         viator:"Viatorはメールのレビューリンクから",
         mention:"スタッフの名前も書いてください！",
         thanks:"率直なご感想をお待ちしています。"},
     zh:{vA1:"点击上方的 Viator 按钮，用预订时的账号登录",vA2:"打开“Bookings”，选择本次体验，点击“Write a Review”",vor:"或者通过 Viator 发来的邮件：",gm:"预订人也请在预订网站上评价",o1:"点击上方的 Google 地图按钮",o2:"登录您的 Google 账号",o3:"选择星级，写几句话后点击“发布”",on:"只要有 Google 账号，没有预订的同行者也可以评价。",how:"如何撰写评价",g1:"点击上方的 GetYourGuide 按钮",g2:"使用预订时的账号登录",g3:"选择星级，写几句话后提交",gn:"也可以通过体验后收到的邮件撰写。只有预订的客人可以评价。",k1:"点击上方的 Klook 按钮并登录",k2:"选择本次体验",k3:"选择星级，写几句话后提交",kn:"请在体验日期后1个月内撰写评价。",v1:"打开体验后 Viator 发来的邮件，点击评价按钮",v2:"选择星级、同行者和是否推荐，然后点 Next",v3:"可以添加照片（可选）",v4:"写下评价（至少100个字符）和标题，勾选方框，然后点 Submit",vn:"Viator 最多会发送3封提醒邮件。",
-        title:"感谢您的参与！",lead:"同行的每一位都可以在 Google 地图上留下评价。",
+        title:"感谢您的参与！",lead:"预订网站上只有预订人可以评价。\n同行的其他人请在 Google 地图上评价。",
         ask1:"我们刚刚在东京京桥开业。",ask2:"您的评价对我们意义重大。",ask3:"只需约1分钟 🙏",
         s1:"打开您预订的网站",s2:"找到您的订单",s3:"点击“撰写评价”",
         viator:"Viator：请使用邮件中的评价链接",
         mention:"请写上接待您的工作人员姓名！",
         thanks:"谢谢您，您的真实反馈对我们很重要。"},
     fr:{vA1:"Touchez le bouton Viator ci-dessus et connectez-vous avec le compte de votre réservation",vA2:"Ouvrez « Bookings », choisissez cette activité et touchez « Write a Review »",vor:"Ou depuis l’e-mail de Viator :",gm:"Si vous avez réservé, laissez aussi un avis sur votre site de réservation",o1:"Touchez le bouton Google Maps ci-dessus",o2:"Connectez-vous avec votre compte Google",o3:"Choisissez les étoiles, écrivez quelques mots et touchez Publier",on:"Toute personne ayant un compte Google peut publier, même si quelqu’un d’autre a réservé.",how:"Comment laisser un avis",g1:"Touchez le bouton GetYourGuide ci-dessus",g2:"Connectez-vous avec le compte de votre réservation",g3:"Choisissez les étoiles, écrivez quelques mots et envoyez",gn:"Vous pouvez aussi utiliser l’e-mail d’avis reçu après votre visite. Seuls les clients ayant réservé peuvent laisser un avis.",k1:"Touchez le bouton Klook ci-dessus et connectez-vous",k2:"Choisissez cette activité",k3:"Choisissez les étoiles, écrivez quelques mots et envoyez",kn:"Les avis peuvent être laissés dans le mois suivant la date de l’activité.",v1:"Ouvrez l’e-mail de Viator reçu après votre visite et touchez le bouton d’avis",v2:"Choisissez les étoiles, avec qui vous étiez et si vous recommandez, puis Next",v3:"Ajoutez des photos si vous voulez (facultatif)",v4:"Écrivez votre avis (100 caractères minimum) et un titre, cochez la case, puis Submit",vn:"Viator envoie jusqu’à 3 e-mails de rappel.",
-        title:"Merci d’être venu !",lead:"Tout votre groupe peut laisser un avis sur Google Maps.",
+        title:"Merci d’être venu !",lead:"Seule la personne qui a réservé peut laisser un avis sur le site de réservation.\nLes autres membres du groupe, laissez un avis sur Google Maps.",
         ask1:"Nous venons d’ouvrir à Kyobashi, Tokyo.",ask2:"Votre avis compte beaucoup pour nous.",ask3:"Cela ne prend qu’une minute 🙏",
         s1:"Ouvrez le site de réservation",s2:"Retrouvez votre réservation",s3:"Touchez « Écrire un avis »",
         viator:"Viator : utilisez le lien reçu par e-mail.",
         mention:"Mentionnez le prénom de votre hôte !",
         thanks:"Merci pour votre avis sincère."},
     es:{vA1:"Toca el botón de Viator de arriba e inicia sesión con la cuenta de tu reserva",vA2:"Abre “Bookings”, elige esta experiencia y toca “Write a Review”",vor:"O desde el correo de Viator:",gm:"Si reservaste, deja también una reseña en tu sitio de reserva",o1:"Toca el botón de Google Maps de arriba",o2:"Inicia sesión con tu cuenta de Google",o3:"Elige las estrellas, escribe unas palabras y toca Publicar",on:"Cualquiera con una cuenta de Google puede publicar, aunque otra persona haya reservado.",how:"Cómo dejar una reseña",g1:"Toca el botón de GetYourGuide de arriba",g2:"Inicia sesión con la cuenta de tu reserva",g3:"Elige las estrellas, escribe unas palabras y envía",gn:"También puedes usar el correo de reseña que recibes después de tu visita. Solo pueden opinar quienes reservaron.",k1:"Toca el botón de Klook de arriba e inicia sesión",k2:"Elige esta experiencia",k3:"Elige las estrellas, escribe unas palabras y envía",kn:"Puedes escribir la reseña hasta 1 mes después de la fecha de la actividad.",v1:"Abre el correo de Viator que recibes después de tu visita y toca el botón de reseña",v2:"Elige las estrellas, con quién viajaste y si lo recomiendas, y luego Next",v3:"Añade fotos si quieres (opcional)",v4:"Escribe tu reseña (mínimo 100 caracteres) y un título, marca la casilla y luego Submit",vn:"Viator envía hasta 3 correos de recordatorio.",
-        title:"¡Gracias por venir!",lead:"Todo tu grupo puede dejar una reseña en Google Maps.",
+        title:"¡Gracias por venir!",lead:"En el sitio de reserva solo puede opinar quien reservó.\nEl resto del grupo, deja tu reseña en Google Maps.",
         ask1:"Acabamos de abrir en Kyobashi, Tokio.",ask2:"Tu reseña significa mucho para nosotros.",ask3:"Solo toma 1 minuto 🙏",
         s1:"Abre el sitio donde reservaste",s2:"Busca tu reserva",s3:"Toca “Escribir una reseña”",
         viator:"Viator: usa el enlace de tu correo.",
